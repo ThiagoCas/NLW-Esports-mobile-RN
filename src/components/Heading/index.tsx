@@ -8,9 +8,9 @@ interface Props extends ViewProps {
     subTitle: string;
 };
 
-export function Heading({ title, subTitle}: Props) {
+export function Heading({ title, subTitle, ...rest}: Props) {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} {...rest}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subTitle}>{subTitle}</Text>
     </View>
